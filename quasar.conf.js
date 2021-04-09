@@ -18,15 +18,10 @@ module.exports = function (/* ctx */) {
     // app boot file (/src/boot)
     // --> boot files are part of "main.js"
     // https://quasar.dev/quasar-cli/boot-files
-    boot: [
-
-      'axios',
-    ],
+    boot: ["axios"],
 
     // https://quasar.dev/quasar-cli/quasar-conf-js#Property%3A-css
-    css: [
-      'app.sass'
-    ],
+    css: ["app.sass"],
 
     // https://github.com/quasarframework/quasar/tree/dev/extras
     extras: [
@@ -38,13 +33,13 @@ module.exports = function (/* ctx */) {
       // 'line-awesome',
       // 'roboto-font-latin-ext', // this or either 'roboto-font', NEVER both!
 
-      'roboto-font', // optional, you are not bound to it
-      'material-icons', // optional, you are not bound to it
+      "roboto-font", // optional, you are not bound to it
+      "material-icons" // optional, you are not bound to it
     ],
 
     // Full list of options: https://quasar.dev/quasar-cli/quasar-conf-js#Property%3A-build
     build: {
-      vueRouterMode: 'hash', // available values: 'hash', 'history'
+      vueRouterMode: "hash", // available values: 'hash', 'history'
 
       // transpile: false,
 
@@ -63,14 +58,14 @@ module.exports = function (/* ctx */) {
       // extractCSS: false,
 
       // https://quasar.dev/quasar-cli/handling-webpack
-      extendWebpack (cfg) {
-cfg.module.rules.push({
-          enforce: 'pre',
+      extendWebpack(cfg) {
+        cfg.module.rules.push({
+          enforce: "pre",
           test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
+          loader: "eslint-loader",
           exclude: /node_modules/
-        })
-      },
+        });
+      }
     },
 
     // Full list of options: https://quasar.dev/quasar-cli/quasar-conf-js#Property%3A-devServer
@@ -82,8 +77,8 @@ cfg.module.rules.push({
 
     // https://quasar.dev/quasar-cli/quasar-conf-js#Property%3A-framework
     framework: {
-      iconSet: 'material-icons', // Quasar icon set
-      lang: 'en-us', // Quasar language pack
+      iconSet: "material-icons", // Quasar icon set
+      lang: "en-us", // Quasar language pack
       config: {
         dark: true
       },
@@ -91,7 +86,7 @@ cfg.module.rules.push({
       // Possible values for "importStrategy":
       // * 'auto' - (DEFAULT) Auto-import needed Quasar components & directives
       // * 'all'  - Manually specify what to import
-      importStrategy: 'auto',
+      importStrategy: "auto",
 
       // For special cases outside of where "auto" importStrategy can have an impact
       // (like functional components as one of the examples),
@@ -101,15 +96,21 @@ cfg.module.rules.push({
       // directives: [],
 
       // Quasar plugins
-      plugins: [
-        'Dialog',
-        'AppFullscreen'
-      ]
+      plugins: ["Dialog", "AppFullscreen"]
     },
 
     // animations: 'all', // --- includes all animations
     // https://quasar.dev/options/animations
-    animations: ['fadeIn', 'fadeOut', 'fadeInLeft', 'fadeInRight', 'fadeInUp', 'fadeOutLeft', 'fadeOutRight', 'fadeOutDown'],
+    animations: [
+      "fadeIn",
+      "fadeOut",
+      "fadeInLeft",
+      "fadeInRight",
+      "fadeInUp",
+      "fadeOutLeft",
+      "fadeOutRight",
+      "fadeOutDown"
+    ],
 
     // https://quasar.dev/quasar-cli/developing-ssr/configuring-ssr
     ssr: {
@@ -118,41 +119,40 @@ cfg.module.rules.push({
 
     // https://quasar.dev/quasar-cli/developing-pwa/configuring-pwa
     pwa: {
-      workboxPluginMode: 'GenerateSW', // 'GenerateSW' or 'InjectManifest'
+      workboxPluginMode: "GenerateSW", // 'GenerateSW' or 'InjectManifest'
       workboxOptions: {}, // only for GenerateSW
       manifest: {
         name: `One Piece Manga Scans`,
         short_name: `One Piece Manga Scans`,
         description: `A Vue.js PWA for One Piece manga scans by TCB Scans.`,
-        display: 'standalone',
-        orientation: 'portrait',
-        background_color: '#ffffff',
-        theme_color: '#027be3',
+        display: "standalone",
+        orientation: "portrait",
+        background_color: "#ffffff",
+        theme_color: "#027be3",
         icons: [
           {
-            src: 'https://onepiecechapters.com/wp-content/uploads/2020/04/RCaNW-qq_400x400-150x150.jpg',
-            sizes: '128x128',
-            type: 'image/png'
+            src:
+              "https://onepiecechapters.com/wp-content/uploads/2020/04/RCaNW-qq_400x400-150x150.jpg",
+            sizes: "128x128",
+            type: "image/png"
           },
           {
-            src: 'https://onepiecechapters.com/wp-content/uploads/2020/04/RCaNW-qq_400x400-150x150.jpg',
-            sizes: '192x192',
-            type: 'image/png'
+            src:
+              "https://onepiecechapters.com/wp-content/uploads/2020/04/RCaNW-qq_400x400-150x150.jpg",
+            sizes: "192x192",
+            type: "image/png"
           },
           {
-            src: 'https://onepiecechapters.com/wp-content/uploads/2020/04/RCaNW-qq_400x400-150x150.jpg',
-            sizes: '256x256',
-            type: 'image/png'
+            src:
+              "https://onepiecechapters.com/wp-content/uploads/2020/04/RCaNW-qq_400x400-300x300.jpg",
+            sizes: "256x256",
+            type: "image/png"
           },
           {
-            src: 'https://onepiecechapters.com/wp-content/uploads/2020/04/RCaNW-qq_400x400-150x150.jpg',
-            sizes: '384x384',
-            type: 'image/png'
-          },
-          {
-            src: 'https://onepiecechapters.com/wp-content/uploads/2020/04/RCaNW-qq_400x400-150x150.jpg',
-            sizes: '512x512',
-            type: 'image/png'
+            src:
+              "https://onepiecechapters.com/wp-content/uploads/2020/04/RCaNW-qq_400x400.jpg",
+            sizes: "384x384",
+            type: "image/png"
           }
         ]
       }
@@ -170,17 +170,15 @@ cfg.module.rules.push({
 
     // Full list of options: https://quasar.dev/quasar-cli/developing-electron-apps/configuring-electron
     electron: {
-      bundler: 'packager', // 'packager' or 'builder'
+      bundler: "packager", // 'packager' or 'builder'
 
       packager: {
         // https://github.com/electron-userland/electron-packager/blob/master/docs/api.md#options
-
         // OS X / Mac App Store
         // appBundleId: '',
         // appCategoryType: '',
         // osxSign: '',
         // protocol: 'myapp://path',
-
         // Windows only
         // win32metadata: { ... }
       },
@@ -188,16 +186,16 @@ cfg.module.rules.push({
       builder: {
         // https://www.electron.build/configuration/configuration
 
-        appId: 'onepiece-scans'
+        appId: "onepiece-scans"
       },
 
       // More info: https://quasar.dev/quasar-cli/developing-electron-apps/node-integration
       nodeIntegration: true,
 
-      extendWebpack (/* cfg */) {
+      extendWebpack(/* cfg */) {
         // do something with Electron main process Webpack cfg
         // chainWebpack also available besides this extendWebpack
       }
     }
-  }
+  };
 }

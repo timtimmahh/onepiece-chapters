@@ -1,7 +1,7 @@
 export default function () {
   return {
     chapters: [],
-    pages: [],
-    media: []
+    pages: { length: 0 },
+    media: { length: 0 }
   };
 }

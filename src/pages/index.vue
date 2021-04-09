@@ -99,14 +99,14 @@ export default {
       get() {
         return this.$store.state.global.media.length < 2
           ? ''
-          : this.$store.state.global.media[2].default.src
+          : this.$store.state.global.media[3131].default.src
       }
     },
     intro: {
       get() {
         return this.$store.state.global.pages.length < 2
           ? ''
-          : this.$store.state.global.pages[2].content
+          : this.$store.state.global.pages['intro'].content
       }
     },
   }

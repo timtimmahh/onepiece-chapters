@@ -15,3 +15,10 @@ export function getChapterTitle (state) {
     return chapter ? chapter.title : '';
   }
 }
+
+export function getUpcomingDate(state) {
+  return id => {
+    let chapter = state.chapters.find(chapter => chapter.to == id);
+    return chapter.upcomingDate
+  };
+}

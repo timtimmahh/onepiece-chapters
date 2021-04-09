@@ -117,9 +117,12 @@ export default {
     },
     info: {
       get() {
-        return this.$store.state.global.pages.filter(function (item) {
-          return item.title !== "Intro" && item.title !== "Contact us";
-        });
+        return Object.entries(this.$store.state.global.pages).reduce((result, [key, value]) => {
+          if (key !== 'intro' && key !== 'contact-us') {
+            result.push(value);
+          }
+          return result;
+        }, []);
       },
     },
     drawer: {
